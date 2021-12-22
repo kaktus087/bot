@@ -25,8 +25,6 @@ def announce(message):
     if "gimnazpass271" in announcement:
         text = announcement[(announcement.find("-text")+6):announcement.find(" -img")]
         image_url = announcement[announcement.find("-img")+5::]
-        print(text)
-        print(image_url)
         for user in joined_users:
             bot.send_message(user, text)
             bot.send_photo(chat_id=joined_users, photo=image_url)
